@@ -66,9 +66,38 @@ def _breadth_first_search(initial_value, expected_value, button_list, money: int
         print(f'{v} moves: {k : <10}')
     print(f'calculated {executed_instructions} combinations')
 
+# buttons = [
+#     '1', '1',
+#     '2', '2',
+#     '3', '3',
+#     '4', '4',
+#     '5', '5',
+#     '6', '6',
+#     '7', '7',
+#     '8', '8',
+#     '9', '9',
+#     '0', '0',
+#     '+', '+',
+#     '-', '-',
+#     'x', 'x',
+#     'div', 'div',
+#     # 'mod', 'mod',
+#     # 'x++', 'x++',
+#     # '+-10', '+-10',
+#     # 'reverse', 'reverse',
+#     # 'sqrt', 'sqrt',
+#     # '2-)4', '2-)4',
+#     # '5x', '5x',
+#     # 'x1', 'x1',
+#     # 'dollar', 'dollar',
+#     # 'x-)25', 'x-)25'
+#     # 'x^2', 'x^2',
+# ]
+
 
 def main():
-    base_buttons = [
+    # For now, get a fresh copy of `buttons` from the comment above, and keep them up to date by yourself ;)
+    buttons = [
         '1', '1',
         '2', '2',
         '3', '3',
@@ -95,39 +124,12 @@ def main():
         # 'x-)25', 'x-)25'
         # 'x^2', 'x^2',
     ]
-    buttons = [
-          #'1', #'1',  # '1',
-          #'2', # '2',
-        '3',    '3',
-        # '4',  # '4',
-        '5',  # '5',
-        '6',    #'6',
-        '7',  # '7',
-        #'8',  # '8',
-        '9',   '9',
-        '0', '0',  # '0',
-          #'+',  # '+',
-        '-', #'-', #'-',
-        #'x',  # 'x', #'x',
-        # 'div', # 'div',
-        # 'mod',  # 'mod',
-        # 'x++',  # 'x++',
-          #'+-10',  # '+-10',
-         #'reverse',  # 'reverse',
-          'sqrt',    'sqrt',# 'sqrt',
-        '2-)4', '2-)4',
-        # '5x',  # '5x',
-        # 'x1',  # 'x1',
-        #'dollar', 'dollar',
-        # 'x-)25', # 'x-)25'
-        # 'x^2', 'x^2',
-        #'99',
-    ]
 
-    # boss fight: every click is double -> remove half of all buttons temporarily
+    # boss fight 1: every click is double -> uncomment to remove duplicates of all buttons temporarily
     # buttons = set(buttons)
 
-    # boss fight: can't see some labels -> remember previous round to use their button values
+    # TODO: boss fight 2:
+    #  can't see some labels -> remember previous round to use their button values
 
     money = detect_coins()
     print(f'money = {money} $')
@@ -135,6 +137,8 @@ def main():
     print(f'initial = {initial}')
     expected = detect_expected()
     print(f'expected = {expected}')
+
+    # disabled by default, it's currently crap
     # buttons = detect_buttons()
     # print(f'buttons = {buttons}')
 
